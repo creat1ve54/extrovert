@@ -1,0 +1,33 @@
+.header {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__case {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    
+    .btn {
+        padding: 25.5px 36px;
+        font-size: 18px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 8px;
+    border: 2px solid #000000;
+    border-radius: 60px;
+    padding: 10px 0px;
+    &-item {
+      font-size: 24px;
+      font-weight: 600;
+      padding: 12px 24px;
+      color: #000000;
+    }
+  }
+}
