@@ -106,29 +106,29 @@ module.exports = {
               ['gifsicle', { interlaced: true, optimizationLevel: 3 }],
               ['mozjpeg', { progressive: true, quality: 70 }],
               ['pngquant', { quality: [0.6, 0.8] }],
-              [
-                'svgo',
-                {
-                  plugins: [
-                    {
-                      name: 'preset-default',
-                      params: {
-                        overrides: {
-                          removeViewBox: false,
-                          sortDefsChildren: false,
-                          mergePaths: false,
-                          moveGroupAttrsToElems: false,
-                          moveElemsAttrsToGroup: false,
-                          cleanupNumericValues: false,
-                          removeNonInheritableGroupAttrs: false,
-                          convertTransform: false,
-                          cleanupEnableBackground: false,
-                        },
-                      },
-                    },
-                  ],
-                },
-              ],
+              // [
+              //   'svgo',
+              //   {
+              //     plugins: [
+              //       {
+              //         name: 'preset-default',
+              //         params: {
+              //           overrides: {
+              //             removeViewBox: false,
+              //             sortDefsChildren: false,
+              //             mergePaths: false,
+              //             moveGroupAttrsToElems: false,
+              //             moveElemsAttrsToGroup: false,
+              //             cleanupNumericValues: false,
+              //             removeNonInheritableGroupAttrs: false,
+              //             convertTransform: false,
+              //             cleanupEnableBackground: false,
+              //           },
+              //         },
+              //       },
+              //     ],
+              //   },
+              // ],
             ],
           },
         },
