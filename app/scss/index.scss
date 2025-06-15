@@ -13,10 +13,28 @@
 /* ================================ Base ================================ */
 @import './-base/**/*.scss';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  position: relative;
   font-family: $FFDefault;
   font-size: 24px;
   font-weight: 500;
+  // background-color: red;
+}
+
+.image-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  mask-image: url('../assets/icons/icon/ellipse.svg');
+  mask-repeat: no-repeat;
 }
 
 .container {
@@ -25,10 +43,30 @@ body {
   max-width: 1352px;
 }
 
-.content > div {
-  display: flex;
-  flex-direction: column;
-  min-height: 100dvh;
+.content {
+  position: relative;
+  z-index: 1;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+  }
+
+  &__main {
+    section {
+      &:not(:last-child) {
+        margin-bottom: 120px;
+      }
+    }
+  }
+
+  &__caption {
+    font-family: $FFMonAlt;
+    font-size: 52px;
+    font-weight: 500;
+    color: rgba(#969696, 0.3);
+    margin-bottom: 36px;
+  }
 }
 
 .btn {
@@ -84,9 +122,50 @@ body {
 }
 
 .link {
-  cursor: pointer;
-  display: flex;
-  width: fit-content;
+  position: relative;
   color: #bb7bda;
-  text-decoration: underline;
+  cursor: pointer;
+  overflow: hidden;
+
+  &--underline {
+    text-decoration: underline;
+    &::before {
+      position: absolute;
+      content: attr(data-content);
+      top: 0;
+      left: 0;
+      color: #000000;
+      text-decoration: underline;
+      overflow: hidden;
+      width: 0;
+      white-space: nowrap;
+      transition: width 275ms ease;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover::before {
+        width: 100%;
+      }
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: attr(data-content);
+    top: 0;
+    left: 0;
+    color: #000000;
+    overflow: hidden;
+    width: 0;
+    white-space: nowrap;
+    transition: width 275ms ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover::before {
+      width: 100%;
+    }
+  }
 }
+
+

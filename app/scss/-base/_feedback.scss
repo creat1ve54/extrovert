@@ -1,0 +1,46 @@
+.feedback {
+  &__container {
+    position: relative;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    padding: 24px;
+  }
+
+  &__decor {
+    pointer-events: none;
+    position: absolute;
+    right: -79px;
+    top: -88px;
+  }
+
+  &__info {
+    padding-right: 320px;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    color: #bb7bda;
+    margin-bottom: 64px;
+    font-size: 36px;
+    letter-spacing: 0%;
+    font-family: $FFMonAlt;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 120px;
+    align-items: center;
+  }
+
+  &__caption {
+    font-size: 36px;
+    font-family: $FFMonAlt;
+  }
+
+  .btn {
+    flex: 1 1 auto;
+    font-size: 18px;
+    padding: 28px;
+  }
+}

@@ -1,2 +1,14 @@
 mixin footer
-    .footer 13
+    .footer
+        .container
+            a(href='tel:89284000911' data-content="8 (928) 4000 911").link.footer__phone 8 (928) 4000 911
+            .footer__row
+                .footer__left
+                    .footer__typing
+                        span.footer__typing-slesh / 
+                        span.footer__typing-text(id="typing") 
+                        span.footer__typing-symbol |
+                    .footer__caption Экстраверт © 2024
+                .footer__right
+                    a(href="https://wa.me/89284000911" target="_blank" data-content="WHATSAPP").link.link--underline.footer__link WHATSAPP
+                    a(href="https://t.me/89284000911" target="_blank" data-content="TELEGRAM").link.link--underline.footer__link TELEGRAM

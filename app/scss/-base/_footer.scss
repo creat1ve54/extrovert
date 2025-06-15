@@ -1,3 +1,68 @@
 .footer {
   margin-top: auto;
+  padding-top: 120px;
+  padding-bottom: 50px;
+  &__phone {
+    font-family: $FFMonAlt;
+    display: block;
+    font-size: 154px;
+    font-weight: 700;
+    color: #bb7bda;
+    margin-bottom: 64px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__typing {
+    font-size: 24px;
+    margin-bottom: 24px;
+    &-slesh {
+      color: #bb7bda;
+    }
+
+    &-symbol {
+      color: #bb7bda;
+      animation-name: opacity;
+      animation-duration: 0.2s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes opacity {
+      0% {
+        opacity: 1;
+      }
+      20% {
+        opacity: 0.3;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    &-text {
+      color: #000000;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__link {
+    font-size: 52px;
+    font-family: $FFMonAlt;
+  }
+
+  &__caption {
+    font-size: 52px;
+    font-family: $FFMonAlt;
+  }
 }
+
+

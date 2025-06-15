@@ -1,0 +1,55 @@
+.stages {
+  &__blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 37px;
+  }
+
+  &__block {
+    position: relative;
+    border-radius: 20px;
+    border: 2px solid #000000;
+    padding: 24px;
+    min-height: 100px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+
+    &-icon {
+      position: absolute;
+      right: -100%;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.3s ease-in-out;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: #dca1f9;
+        transition: all 0.3s ease-in-out;
+        .stages__block {
+          &-icon {
+            right: -15px;
+            animation-name: rotate;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateY(-50%) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-50%) rotate(15deg);
+  }
+
+  100% {
+    transform: translateY(-50%) rotate(0);
+  }
+}

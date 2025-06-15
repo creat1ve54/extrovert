@@ -7,10 +7,15 @@ mixin header
                         use( href="../assets/icons/sprite.svg#logo")
                 .header__case
                     nav.header__nav
-                        a(href='##').header__nav-item Главная
-                        a(href='##').header__nav-item Преимущества
-                        a(href='##').header__nav-item Принципы
-                        a(href='##').header__nav-item Контакты
+                        div.header__progress-bar
+                        div(data-section='#main').header__nav-item
+                            span Главная
+                        div(data-section='#advantages').header__nav-item 
+                            span Преимущества
+                        div(data-section='#principles').header__nav-item 
+                            span Принципы
+                        div(data-section='#feedback').header__nav-item 
+                            span Контакты
                     button.btn
                         | написать
                         svg(width="20" height="20").btn__arrow 

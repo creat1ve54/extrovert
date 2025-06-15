@@ -1,0 +1,61 @@
+.advantages {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  &__item {
+    width: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    min-height: 1px;
+    transition: all 0.3s ease-in-out 0.3s;
+    // gap: 24px;
+    // padding-left: 156;
+    // transform: translateX(-156px);
+
+    &-img {
+      position: absolute;
+      left: 0;
+      flex: 0 0 auto;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+    }
+
+    &-text {
+      color: #bb7bda;
+      font-size: 24px;
+      font-weight: 600;
+      padding: 0;
+      transition: padding 0.3s ease-in-out;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        min-height: 132px;
+        transition: all 0.3s ease-in-out;
+        .advantages {
+          &__item {
+            &-img {
+              opacity: 1;
+              transform: translateY(0%);
+              transition: all 0.3s ease-in-out;
+            }
+
+            &-text {
+              font-size: 36px;
+              color: #000000;
+              padding-left: 156px;
+              font-family: $FFMonAlt;
+              transition: padding 0.3s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+}

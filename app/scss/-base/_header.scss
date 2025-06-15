@@ -1,5 +1,10 @@
 .header {
+  position: sticky;
+  top: 0px;
+  z-index: 6;
+  margin-bottom: 87px;
   &__container {
+    padding-top: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,24 +15,96 @@
     display: flex;
     align-items: center;
     gap: 32px;
-    
+
     .btn {
-        padding: 25.5px 36px;
-        font-size: 18px;
+      padding: 25.5px 36px;
+      font-size: 18px;
     }
   }
 
+  &__progress-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: #000000;
+    transition: all 0.3s ease-in-out;
+  }
+
   &__nav {
+    overflow: hidden;
+    position: relative;
     display: flex;
-    gap: 8px;
+    // gap: 8px;
     border: 2px solid #000000;
     border-radius: 60px;
-    padding: 10px 0px;
+    // padding: 10px 12px;
+    backdrop-filter: blur(3px);
+
     &-item {
+      position: relative;
+
+      cursor: pointer;
       font-size: 24px;
       font-weight: 600;
-      padding: 12px 24px;
+      padding: 22px 24px;
       color: #000000;
+      transition: all 0.3s ease-in-out;
+
+      span {
+        position: relative;
+        z-index: 1;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0;
+        background-color: #000000;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &--active {
+        color: #ffffff;
+        transition: all 0.3s ease-in-out;
+        // &::before {
+        //   width: 100%;
+        //   transition: all 0.2s ease-in-out;
+        // }
+      }
+
+      // &:first-child {
+      //   border-radius: 60px 0px 0px 60px;
+      // }
+
+      // &:last-child {
+      //   border-radius: 0 60px 60px 0px;
+      // }
+
+      // &::before {
+      //   content: '';
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   height: 100%;
+      //   width: 100%;
+      //   background: black;
+      //   transform: scaleX(0);
+      //   transform-origin: left;
+      //   transition: transform 0.4s ease;
+      //   z-index: -1;
+      // }
+
+      // .active::before {
+      //   transform: scaleX(1);
+      // }
+
+      // .active {
+      //   color: white;
+      // }
     }
   }
 }

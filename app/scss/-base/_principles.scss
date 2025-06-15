@@ -1,0 +1,31 @@
+.principles {
+  .swiper {
+    padding-bottom: 60px;
+  }
+
+  .swiper-wrapper {
+    // max-width: 1352px;
+    // margin: 0 auto;
+    // padding: 0 36px;
+  }
+
+  .swiper-slide {
+        display: flex;
+        gap: 74px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+  }
+
+  .swiper-pagination-bullet {
+    background: url('../assets/icons/icon/swiper-before.svg');
+    width: 26px;
+    height: 26px;
+    background-repeat: no-repeat;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: url('../assets/icons/icon/swiper-after.svg');
+  }
+}

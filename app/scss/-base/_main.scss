@@ -1,0 +1,34 @@
+.main {
+  margin-bottom: 48px;
+  &__container {
+    position: relative;
+    padding-bottom: 69px;
+  }
+
+  &__title {
+    font-size: 120px;
+    font-weight: 500;
+    line-height: 100%;
+    margin-bottom: 50px;
+    font-family: $FFMonAlt;
+  }
+
+  &__text {
+    font-family: $FFMonAlt;
+    font-size: 52px;
+    font-weight: 500;
+
+    &--right {
+      margin-top: 132px;
+      text-align: right;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    bottom: -10px;
+    right: 27%;
+    // right: 350px;
+    z-index: -1;
+  }
+}
